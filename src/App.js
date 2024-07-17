@@ -6,6 +6,8 @@ function App() {
     <div>
       <Routes>
         <Route path='' element={}/>
+        <Route path='' element={}/>
+        <Route path='' element={}/>
       </Routes>
     </div>
   );
