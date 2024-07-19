@@ -2,7 +2,7 @@ import React from 'react'
 
 const ProductCard = ({item}) => {
   return (
-    <div>
+    <div onClick={showDetail}>
         <img src={item?.img}/>
         <div>Consious choice</div>
         <div>{item?.title}</div>
