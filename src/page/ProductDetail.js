@@ -11,7 +11,8 @@ const ProductDetail = () => {
     let url = `http://localhost:4000/products/${id}`
     let reponse = await fetch(url);
     let data = await reponse.json();
-    console.log("data", data)
+    console.log("data", data);
+    setProduct(data);
   }
 
   useEffect(() => {
