@@ -28,7 +28,7 @@ const Navbar = () => {
           </ul>
 
         <div>
-          <input type='text'/>
+          <input type='text' onKeyPress={search}/>
         </div>
         
       </div>
