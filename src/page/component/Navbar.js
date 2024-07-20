@@ -7,7 +7,12 @@ const Navbar = () => {
   const goToLogin = () => {
     navigate('/login')
   }
-  const search = () => {}
+  const search = (event) => {
+    if (event.key === "Enter") {
+      let keyword = event.target.value;
+      navigate(`/?q=${keyword}`);
+    }
+  }
 
   return (
     <div>
@@ -29,7 +34,7 @@ const Navbar = () => {
           </ul>
 
         <div>
-          <input type='text' onKeyPress={search}/>
+          <input type='text' onKeyPress={(event)=>search(event)}/>
         </div>
         
       </div>
