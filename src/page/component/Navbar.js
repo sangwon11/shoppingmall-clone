@@ -7,6 +7,7 @@ const Navbar = () => {
   const goToLogin = () => {
     navigate('/login')
   }
+  const search = () => {}
 
   return (
     <div>
