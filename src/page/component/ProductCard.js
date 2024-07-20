@@ -3,7 +3,9 @@ import { useNavigate } from 'react-router-dom'
 
 const ProductCard = ({item}) => {
   const navigate = useNavigate();
-  const showDetail = () => {}
+  const showDetail = () => {
+    navigate(`/product/${item.id}`);
+  }
   return (
     <div onClick={showDetail}>
         <img src={item?.img}/>
