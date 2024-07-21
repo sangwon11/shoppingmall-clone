@@ -19,6 +19,7 @@ const Navbar = () => {
     <div>
 
       <div className='login-button' onClick={goToLogin}>
+        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
         <div>로그인</div>
       </div>
 
