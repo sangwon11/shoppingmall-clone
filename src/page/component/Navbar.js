@@ -40,7 +40,7 @@ const Navbar = () => {
 
         <div>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
-          <input type='text' onKeyPress={(event)=>search(event)}/>
+          <input className='search-bar' type='text' onKeyPress={(event)=>search(event)}/>
         </div>
         
       </div>
