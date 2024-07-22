@@ -6,4 +6,4 @@ const PrivateRoute = ({authenticate}) => {
   return authenticate == true ? <ProductDetail /> : <Navigate to="/login"/>
 }
 
-export default PrivateRoute
+export default PrivateRoute;
