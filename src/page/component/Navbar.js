@@ -1,5 +1,8 @@
 import React from 'react'
-import { useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
+
 
 const Navbar = () => {
   const menuList = ['여성','devided','남성','신생아/유아',"아동",'h&m Home','Sale','지속가능성']
@@ -19,7 +22,7 @@ const Navbar = () => {
     <div>
 
       <div className='login-button' onClick={goToLogin}>
-        <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" />
+        <FontAwesomeIcon icon={faUser} />
         <div>로그인</div>
       </div>
 
@@ -36,6 +39,7 @@ const Navbar = () => {
           </ul>
 
         <div>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
           <input type='text' onKeyPress={(event)=>search(event)}/>
         </div>
         
