@@ -34,7 +34,6 @@ const Login = ({setAuthenticate}) => {
       </Form>
     </Container>
   )
-  
 }
 
 export default Login;
