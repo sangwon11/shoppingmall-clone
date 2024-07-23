@@ -5,8 +5,8 @@ import { useSearchParams } from 'react-router-dom';
 
 const ProductAll = () => {
 
-  const [productList, setProductList] = useState([]);
-  const [query, setQuery] = useSearchParams();
+  let [productList, setProductList] = useState([]);
+  let [query, setQuery] = useSearchParams();
 
   const getProducts = async () => {
     let searchQuery = query.get("q") || "";
@@ -15,7 +15,7 @@ const ProductAll = () => {
     let response = await fetch(url);
     let data = await response.json();
     setProductList(data);
-}
+};
 
 
 useEffect(()=>{
