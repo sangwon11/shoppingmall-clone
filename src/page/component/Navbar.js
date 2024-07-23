@@ -19,7 +19,7 @@ const Navbar = () => {
   }
 
   return (
-    <div>
+    <div >
 
       <div className='login-button' onClick={goToLogin}>
         <FontAwesomeIcon icon={faUser} style={{margin:3}} />
@@ -27,7 +27,7 @@ const Navbar = () => {
       </div>
 
       <div className='nav-section'>
-        <img width={100} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXpRqYm8ZV9DX0FdTQzy6Lpcm6GMKfBbNO7Q&s'/>
+        <div className='title'>Flugel</div>
       </div>
 
       <div className='menu-area'>
