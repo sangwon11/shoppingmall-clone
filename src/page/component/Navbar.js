@@ -22,7 +22,7 @@ const Navbar = () => {
     <div>
 
       <div className='login-button' onClick={goToLogin}>
-        <FontAwesomeIcon icon={faUser} />
+        <FontAwesomeIcon icon={faUser} style={{margin:3}} />
         <div>로그인</div>
       </div>
 
