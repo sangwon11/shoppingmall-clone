@@ -10,8 +10,8 @@ body {
 }
 
 .search-bar input {
-    border-radius: 30px;
     height: 45%;
+    border-radius: 50px;
 }
 
 .login-button {
