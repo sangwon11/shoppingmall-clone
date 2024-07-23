@@ -65,3 +65,18 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.product-purchase {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 250px;
+}
+
+.product-purchase form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100px;
+    width: 150px;
+}

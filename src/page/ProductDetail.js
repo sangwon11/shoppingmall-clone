@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 
 const ProductDetail = () => {
@@ -25,9 +25,20 @@ const ProductDetail = () => {
         <Col className='product-img'>
           <img className='productList' src={product?.img}/>
         </Col>
-        <Col>
-          <div>{product?.title}</div>
-          <div>{product?.price}</div>
+        <Col className='product-purchase'>
+          <div>
+            <div>{product?.title}</div>
+            <div>{product?.price}</div>
+          </div>
+          <form>
+            <select required>
+              <option value="" selected>size</option>
+              <option value="S">S</option>
+              <option value="M">M</option>
+              <option value="L">L</option>
+            </select>
+            <Button>구매</Button>
+          </form>
         </Col>
       </Row>
     </Container>
