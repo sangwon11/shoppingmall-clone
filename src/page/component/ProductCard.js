@@ -8,7 +8,7 @@ const ProductCard = ({item}) => {
   }
   return (
     <div onClick={showDetail}>
-        <img src={item?.img}/>
+        <img className='productList' src={item?.img}/>
         <div>Consious choice</div>
         <div>{item?.title}</div>
         <div>₩{item?.price}</div>

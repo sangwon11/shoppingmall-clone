@@ -5,7 +5,7 @@ import { faMagnifyingGlass, faUser } from '@fortawesome/free-solid-svg-icons'
 
 
 const Navbar = () => {
-  const menuList = ['여성','devided','남성','신생아/유아',"아동",'h&m Home','Sale','지속가능성']
+  const menuList = ['여성','남성','신생아/유아',"아동",'Home','Sale']
   const navigate = useNavigate()
   
   const goToLogin = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
   }
 
   return (
-    <div >
+    <div className='nav'>
 
       <div className='login-button' onClick={goToLogin}>
         <FontAwesomeIcon icon={faUser} style={{margin:3}} />
