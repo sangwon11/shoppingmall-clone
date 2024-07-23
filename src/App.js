@@ -17,7 +17,7 @@ function App() {
   }, [authenticate])
 
   return (
-    <div>
+    <div className='all'>
       <Navbar/>
       <NavbarCase/>
       <Routes>
