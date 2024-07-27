@@ -26,11 +26,11 @@ useEffect(()=>{
     <div>
       <Container>
         <Row>
-          {productList && productList.products.map((menu) => (
+          {productList?.map((menu) => (
             <Col lg={3}>
             <ProductCard item={menu} />
             </Col>
-        ))}
+          ))}
         </Row>
       </Container>
     </div>
