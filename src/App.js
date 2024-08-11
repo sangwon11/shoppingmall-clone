@@ -19,7 +19,6 @@ function App() {
   return (
     <div className='all'>
       <Navbar/>
-      <NavbarCase/>
       <Routes>
         <Route path='/' element={<ProductAll/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>

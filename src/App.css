@@ -1,4 +1,7 @@
+body {
+    padding-top: 170px;
 
+}
 
 .nav {
     display: flex;
@@ -6,6 +9,7 @@
     width: 100vw;
     background-color:white;
     position: fixed;
+    top: 0px;
 }
 
 .login-button {
