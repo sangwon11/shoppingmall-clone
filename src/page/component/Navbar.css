@@ -16,8 +16,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
     width: 500px;
+}
+
+.title {
+    cursor: pointer;
 }
 
 .nav-section-1-menu {
@@ -25,8 +28,9 @@
     justify-content: space-between;
     list-style-type: none;
     margin: 0;
-    padding: 10px;
+    padding: 15px;
     width: 150px;
+    cursor: pointer;
 }
 
 .nav-section-1-search {

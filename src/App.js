@@ -21,6 +21,7 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path='/' element={<Main/>}/>
+        <Route path='/store' element={<ProductAll/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>

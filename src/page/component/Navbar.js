@@ -15,6 +15,9 @@ const Navbar = () => {
   const goToLogin = () => {
     navigate('/login')
   }
+  const gotoStore = () => {
+    navigate('/store')
+  }
   const search = (event) => {
     if (event.key === "Enter") {
       let keyword = event.target.value;
@@ -28,7 +31,7 @@ const Navbar = () => {
       <div className='nav-section-1'>
         <div onClick={gotoHome} className='title'>SENSATION</div>
 
-        <ul className='nav-section-1-menu'>
+        <ul className='nav-section-1-menu' onClick={gotoStore}>
             {menuList.map((menu) => (
               <li>{menu}</li>
             ))}
