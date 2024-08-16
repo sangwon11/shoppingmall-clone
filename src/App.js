@@ -6,7 +6,6 @@ import Navbar from './page/component/Navbar';
 import PrivateRoute from './Route/PrivateRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
-import NavbarCase from './page/component/NavbarCase';
 
 
 function App() {
