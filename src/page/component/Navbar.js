@@ -33,18 +33,14 @@ const Navbar = () => {
               <li>{menu}</li>
             ))}
           </ul>
-      </div>
 
-      <div className='menu-area'>
-
-        <div className='menu-area-search'>
+        <div className='nav-section-1-search'>
           <FontAwesomeIcon icon={faMagnifyingGlass} style={{margin:10}} />
           <input type='text' onKeyPress={(event)=>search(event)}/>
-        </div>
-        
+        </div>  
       </div>
 
-      <div className='nav-section-3'>
+      <div className='nav-section-2'>
         <div onClick={goToLogin}>LOG IN</div>
         <div>SIGN UP</div>
         <div>CART 0</div>
