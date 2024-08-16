@@ -25,17 +25,17 @@ const Navbar = () => {
   return (
     <div className='nav'>
 
-      <div className='nav-section'>
-        <div onClick={gotoHome} className='title'>Sensation</div>
-      </div>
+      <div className='nav-section-1'>
+        <div onClick={gotoHome} className='title'>SENSATION</div>
 
-      <div className='menu-area'>
-
-          <ul className='menu-area-list'>
+        <ul className='nav-section-1-menu'>
             {menuList.map((menu) => (
               <li>{menu}</li>
             ))}
           </ul>
+      </div>
+
+      <div className='menu-area'>
 
         <div className='menu-area-search'>
           <FontAwesomeIcon icon={faMagnifyingGlass} style={{margin:10}} />
@@ -44,8 +44,11 @@ const Navbar = () => {
         
       </div>
 
-      <div className='login-button' onClick={goToLogin}>
-        <div>Log In</div>
+      <div className='nav-section-3'>
+        <div onClick={goToLogin}>LOG IN</div>
+        <div>SIGN UP</div>
+        <div>CART 0</div>
+        <div>KRW</div>
       </div>
 
     </div>
