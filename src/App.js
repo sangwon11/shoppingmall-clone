@@ -4,6 +4,7 @@ import ProductAll from './page/ProductAll';
 import Login from './page/Login';
 import Navbar from './page/component/Navbar';
 import PrivateRoute from './Route/PrivateRoute';
+import Main from './page/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 
@@ -19,7 +20,7 @@ function App() {
     <div className='all'>
       <Navbar/>
       <Routes>
-        <Route path='/' element={<ProductAll/>}/>
+        <Route path='/' element={<Main/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
