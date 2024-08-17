@@ -12,7 +12,10 @@ const Navbar = () => {
   const gotoHome = () => {
     navigate('/')
   }
-  const goToLogin = () => {
+  const gotoSignUp = () => {
+    navigate('/signup')
+  }
+  const gotoLogin = () => {
     navigate('/login')
   }
   const gotoStore = () => {
@@ -44,8 +47,8 @@ const Navbar = () => {
       </div>
 
       <div className='nav-section-2'>
-        <div onClick={goToLogin}>LOG IN</div>
-        <div>SIGN UP</div>
+        <div onClick={gotoLogin}>LOG IN</div>
+        <div onClick={gotoSignUp}>SIGN UP</div>
         <div>CART 0</div>
         <div>KRW</div>
       </div>

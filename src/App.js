@@ -7,6 +7,7 @@ import PrivateRoute from './Route/PrivateRoute';
 import Main from './page/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
+import SignUp from './page/SignUp';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/store' element={<ProductAll/>}/>
+        <Route path='/signup' element={<SignUp/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
