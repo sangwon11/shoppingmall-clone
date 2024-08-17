@@ -9,8 +9,9 @@ const SignUp = () => {
     }
   return (
     <div className='signup'>
+        <div className='shape'></div>
         <div className='signup-box'>
-            <h2>Create Account</h2>
+            <h2>SIGN UP</h2>
             <form>
                 <div>
                     <input/>
@@ -32,7 +33,10 @@ const SignUp = () => {
                 </div>
             </form>
         </div>
-        <div className=''></div>
+        <div className='signup-info login'>
+            <h2>Create Account</h2>
+            <p>description description description description</p>
+        </div>
     </div>
   )
 }
