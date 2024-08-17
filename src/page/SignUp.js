@@ -32,6 +32,7 @@ const SignUp = () => {
                 </div>
             </form>
         </div>
+        <div className=''></div>
     </div>
   )
 }
