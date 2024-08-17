@@ -1,9 +1,10 @@
-body {
-   
-}
+.background {
+    padding-top: 130px;
+    display: flex;
+    justify-content: center;
+    background: black;
+    min-height: 100vh;
 
-.all {
-    padding-top: 170px;
 }
 
 .productList {

@@ -18,7 +18,7 @@ function App() {
   }, [authenticate])
 
   return (
-    <div className='all'>
+    <div className='background'>
       <Navbar/>
       <Routes>
         <Route path='/' element={<Main/>}/>

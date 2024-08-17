@@ -9,6 +9,7 @@
     top: 0px;
     font-weight: 900;
     padding: 20px !important;
+    z-index: 1;
 }
 
 .nav-section-1 {
