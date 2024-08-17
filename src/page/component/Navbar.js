@@ -24,7 +24,7 @@ const Navbar = () => {
   const search = (event) => {
     if (event.key === "Enter") {
       let keyword = event.target.value;
-      navigate(`/?q=${keyword}`);
+      navigate(`/store/?q=${keyword}`);
     }
   }
 
