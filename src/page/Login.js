@@ -8,7 +8,7 @@ const Login = ({setAuthenticate}) => {
     event.preventDefault();
     console.log("login")
     setAuthenticate(true);
-    navigate('/')
+    navigate('/store')
   }
   return (
     <Container>

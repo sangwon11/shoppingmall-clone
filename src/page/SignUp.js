@@ -2,8 +2,13 @@ import React from 'react'
 import './SignUp.css';
 import { useNavigate } from 'react-router-dom';
 
-const SignUp = () => {
+const SignUp = ({setMember}) => {
     const navigate = useNavigate()
+    const signupUser = (event) => {
+        event.preventDefault();
+        setMember(true);
+        navigate('/login')
+    }
     const gotoLogin =() => {
         navigate('/login')
     }
@@ -12,7 +17,7 @@ const SignUp = () => {
         <div className='shape'></div>
         <div className='signup-box'>
             <h2>SIGN UP</h2>
-            <form>
+            <form onSubmit={(event) => signupUser(event)}>
                 <div>
                     <input/>
                     <label>ID</label>

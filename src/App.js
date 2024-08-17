@@ -11,6 +11,7 @@ import SignUp from './page/SignUp';
 
 
 function App() {
+  const [member, setMember] = useState(false);
   const [authenticate, setAuthenticate] = useState(false);
   
   useEffect(() => {
@@ -23,7 +24,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/store' element={<ProductAll/>}/>
-        <Route path='/signup' element={<SignUp/>}/>
+        <Route path='/signup' element={<SignUp setMember={setMember}/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<PrivateRoute authenticate={authenticate}/>}/>
       </Routes>
