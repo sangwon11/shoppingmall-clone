@@ -1,38 +1,44 @@
 import React from 'react'
-import { Button, Container, Form } from 'react-bootstrap';
+import './Login.css';
 import { useNavigate } from 'react-router-dom';
 
 const Login = ({setAuthenticate}) => {
   const navigate = useNavigate();
   const loginUser = (event) => {
     event.preventDefault();
-    console.log("login")
     setAuthenticate(true);
     navigate('/store')
   }
+  const gotoSignup = () => {
+    navigate('/signup')
+  }
   return (
-    <Container>
-      <Form onSubmit={(event)=>loginUser(event)}>
-        <Form.Group className="mb-3" controlId="formBasicEmail">
-        <Form.Label>Email address</Form.Label>
-        <Form.Control type="email" placeholder="Enter email" />
-        <Form.Text className="text-muted">
-          We'll never share your email with anyone else.
-        </Form.Text>
-        </Form.Group>
-
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-        <Form.Label>Password</Form.Label>
-        <Form.Control type="password" placeholder="Password" />
-        </Form.Group>
-        <Form.Group className="mb-3" controlId="formBasicCheckbox">
-        <Form.Check type="checkbox" label="Check me out" />
-        </Form.Group>
-        <Button variant="danger" type="submit">
-        Submit
-        </Button>
-      </Form>
-    </Container>
+    <div className='login1'>
+        <div className='shape'></div>
+        <div className='login-box'>
+            <h2>SIGN IN</h2>
+            <form onSubmit={(event) => loginUser(event)}>
+                <div>
+                    <input/>
+                    <label>ID</label>
+                </div>
+                <div>
+                    <input/>
+                    <label>Password</label>
+                </div>
+                <div>
+                    <button className='btn' type='submit'>LOG IN</button>
+                </div>
+                <div className='login-btn'>
+                    <p>Don't have an account ?<span onClick={gotoSignup}>SIGN UP</span></p>
+                </div>
+            </form>
+        </div>
+        <div className='login-info login'>
+            <h2>WELCOME</h2>
+            <p>description description description description</p>
+        </div>
+    </div>
   )
 }
 
