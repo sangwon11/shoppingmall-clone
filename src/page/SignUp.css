@@ -5,7 +5,6 @@
     height: 500px;
     border: 2px solid #d6ed0e;
     box-shadow: 0 0 25px #d6ed0e;
-    background-color: black;
     color: #fff;
 }
 
@@ -16,6 +15,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    left: 0;
+    padding: 0 40px;
 }
 
 .signup-box h2 {
@@ -27,6 +28,8 @@
     position: relative;
     width: 100%;
     height: 50px;
+    margin-top: 25px;
+    color: #fff;
 }
 
 .signup-box div input {
@@ -36,22 +39,72 @@
     color: #fff;
     border: none;
     outline: none;
-    padding-left: 1px;
-    font-size: 17px;
+    font-size: 15px;
     border-bottom: 2px solid #fff;
+    transition: 1s;
 }
 
 .signup-box div label {
     position: absolute;
     left: 0;
     top: 50%;
-    font-size: 17px;
+    font-size: 15px;
     transform: translateY(-50%);
-    transition: .5s;
+    transition: 0.5s;
 }
 
 .signup-box div input:focus ~ label {
+    color: #d6ed0e;
     top: -5px;
+}
+
+.signup-box div input:focus {
+    border-bottom: 2px solid #d6ed0e;
+}
+
+.btn {
+    position: relative;
+    width: 100%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #d6ed0e;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b, #d6ed0e, #25252b, #d6ed0e);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+ .btn:hover:before {
+    top: 0;
+}
+
+.login-btn {
+    font-size: 15px;
+    text-align: center;
+}
+
+.login-btn span {
+    margin-left: 10px;
+    cursor:pointer;
+    font-weight: 600;
     color: #d6ed0e;
 }
 
+.login-btn span:hover {
+    text-decoration: underline;
+}

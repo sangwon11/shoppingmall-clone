@@ -13,21 +13,21 @@ const SignUp = () => {
             <h2>Create Account</h2>
             <form>
                 <div>
-                    <input></input>
+                    <input/>
                     <label>ID</label>
                 </div>
                 <div>
-                    <input></input>
+                    <input/>
                     <label>Password</label>
                 </div>
                 <div>
-                    <input></input>
+                    <input/>
                     <label>Email</label>
                 </div>
                 <div>
-                    <button>Register</button>
+                    <button className='btn' type='submit'>SIGN UP</button>
                 </div>
-                <div>
+                <div className='login-btn'>
                     <p>Do you have an account ?<span onClick={gotoLogin}>LOG IN</span></p>
                 </div>
             </form>
