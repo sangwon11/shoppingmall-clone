@@ -8,6 +8,7 @@ import Main from './page/Main';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import SignUp from './page/SignUp';
+/* 배포오류 */
 
 
 function App() {
