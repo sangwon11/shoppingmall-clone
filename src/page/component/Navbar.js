@@ -29,7 +29,6 @@ const Navbar = ({authenticate, setAuthenticate}) => {
   }
   const LoginLogout = () => {
     if (authenticate) {
-      // 로그아웃 로직
       setAuthenticate(false);
       navigate('/');
     } else {
