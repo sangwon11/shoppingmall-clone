@@ -21,7 +21,7 @@ function App() {
 
   return (
     <div className='background'>
-      <Navbar/>
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/store' element={<ProductAll/>}/>

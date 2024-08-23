@@ -1,13 +1,22 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
 import './Navbar.css';
 
-
-const Navbar = () => {
+const Navbar = ({authenticate, setAuthenticate}) => {
   const menuList = ['SERIES', 'STORE']
   const navigate = useNavigate()
+
+  const [loginout,setLoginout] = useState('LOG IN');
+
+  useEffect(() => {
+    if (authenticate) {
+      setLoginout('LOG OUT');
+    } else {
+      setLoginout('LOG IN');
+    }
+  }, [authenticate]);
   
   const gotoHome = () => {
     navigate('/')
@@ -15,12 +24,18 @@ const Navbar = () => {
   const gotoSignUp = () => {
     navigate('/signup')
   }
-  const gotoLogin = () => {
-    navigate('/login')
-  }
   const gotoStore = () => {
     navigate('/store')
   }
+  const LoginLogout = () => {
+    if (authenticate) {
+      // 로그아웃 로직
+      setAuthenticate(false);
+      navigate('/');
+    } else {
+      navigate('/login');
+    }
+  };
   const search = (event) => {
     if (event.key === "Enter") {
       let keyword = event.target.value;
@@ -47,7 +62,7 @@ const Navbar = () => {
       </div>
 
       <div className='nav-section-2'>
-        <div onClick={gotoLogin}>LOG IN</div>
+        <div onClick={LoginLogout}>{loginout}</div>
         <div onClick={gotoSignUp}>SIGN UP</div>
         <div>CART 0</div>
         <div>KRW</div>
