@@ -30,7 +30,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
   const LoginLogout = () => {
     if (authenticate) {
       setAuthenticate(false);
-      navigate('/');
+      navigate('/login');
     } else {
       navigate('/login');
     }
