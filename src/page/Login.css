@@ -1,17 +1,18 @@
 .login1 {
     position: relative;
     border: 1px solid;
-    width: 800px;
+    width: 400px;
     height: 500px;
     border: 2px solid #d6ed0e;
     box-shadow: 0 0 25px #d6ed0e;
     color: #fff;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .login-box {
     position: relative;
-    width: 50%;
+    width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -108,40 +109,4 @@
 
 .login-btn span:hover {
     text-decoration: underline;
-}
-
-.login-info {
-    position:absolute;
-    top: 0;
-    height: 100%;
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.login-info h2 {
-    text-transform: uppercase;
-    font-size: 35px;
-    line-height: 1.3;
-}
-.login-info p {
-    font-size: 15px;
-}
-
-.login-info.login {
-    right: 0;
-    text-align: right;
-    padding: 0 40px 0 120px;
-}
-
-.login1 .shape {
-    position: absolute;
-    right: 0;
-    top: -5px;
-    height: 600px;
-    width: 850px;
-    background: linear-gradient(45deg,#25252b,#d6ed0e);
-    transform: rotate(10deg) skewY(40deg);
-    transform-origin: bottom right;
 }

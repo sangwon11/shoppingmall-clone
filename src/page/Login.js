@@ -14,7 +14,6 @@ const Login = ({setAuthenticate}) => {
   }
   return (
     <div className='login1'>
-        <div className='shape'></div>
         <div className='login-box'>
             <h2>SIGN IN</h2>
             <form onSubmit={(event) => loginUser(event)}>
@@ -33,10 +32,6 @@ const Login = ({setAuthenticate}) => {
                     <p>Don't have an account ?<span onClick={gotoSignup}>SIGN UP</span></p>
                 </div>
             </form>
-        </div>
-        <div className='login-info login'>
-            <h2>WELCOME</h2>
-            <p>description description description description</p>
         </div>
     </div>
   )

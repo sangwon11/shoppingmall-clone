@@ -38,10 +38,6 @@ const SignUp = ({setMember}) => {
                 </div>
             </form>
         </div>
-        <div className='signup-info login'>
-            <h2>Create Account</h2>
-            <p>description description description description</p>
-        </div>
     </div>
   )
 }
