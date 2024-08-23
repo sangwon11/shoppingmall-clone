@@ -44,9 +44,9 @@ const Navbar = ({authenticate, setAuthenticate}) => {
 
   return (
     <div className='nav'>
-
+      <div className='nav1'>
       <div className='nav-section-1'>
-        <div onClick={gotoHome} className='title'>SENSATION</div>
+        <div onClick={gotoHome} className='title'>FLUGEL</div>
 
         <ul className='nav-section-1-menu' onClick={gotoStore}>
             {menuList.map((menu) => (
@@ -66,7 +66,9 @@ const Navbar = ({authenticate, setAuthenticate}) => {
         <div>CART 0</div>
         <div>KRW</div>
       </div>
-
+      </div>
+      <div className='nav2'>FlUGEL HOMEPAGE NEW OPEN
+      </div>
     </div>
   )
 }
