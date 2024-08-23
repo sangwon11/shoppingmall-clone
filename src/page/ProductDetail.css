@@ -1,0 +1,32 @@
+.purchase-btn {
+    position: relative;
+    width: 50%;
+    height: 45px;
+    background: transparent;
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    border: 2px solid #d6ed0e;
+    overflow: hidden;
+    z-index: 1;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.purchase-btn::before {
+    content: "";
+    position: absolute;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#25252b, #d6ed0e, #25252b, #d6ed0e);
+    top: -100%;
+    left: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+ .purchase-btn:hover:before {
+    top: 0;
+}

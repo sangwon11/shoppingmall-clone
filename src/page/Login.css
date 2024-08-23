@@ -64,7 +64,7 @@
     border-bottom: 2px solid #d6ed0e;
 }
 
-.btn {
+.signin-btn {
     position: relative;
     width: 100%;
     height: 45px;
@@ -79,7 +79,7 @@
     z-index: 1;
 }
 
-.btn::before {
+.signin-btn::before {
     content: "";
     position: absolute;
     height: 300%;
@@ -91,7 +91,7 @@
     transition: 0.5s;
 }
 
- .btn:hover:before {
+ .signin-btn:hover:before {
     top: 0;
 }
 

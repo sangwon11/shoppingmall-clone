@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
+import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
+import './ProductDetail.css';
 
 const ProductDetail = ({ authenticate }) => {
 
@@ -47,7 +48,7 @@ const ProductDetail = ({ authenticate }) => {
               <option value="M">M</option>
               <option value="L">L</option>
             </select>
-            <Button onClick={() =>handlePurchase()}>구매</Button>
+            <button className='purchase-btn' onClick={() =>handlePurchase()}>구매</button>
           </form>
         </Col>
       </Row>

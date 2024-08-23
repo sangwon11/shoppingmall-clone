@@ -22,11 +22,11 @@ const Login = ({setAuthenticate}) => {
                     <label>ID</label>
                 </div>
                 <div>
-                    <input/>
+                    <input type='password'/>
                     <label>Password</label>
                 </div>
                 <div>
-                    <button className='btn' type='submit'>LOG IN</button>
+                    <button className='signin-btn' type='submit'>LOG IN</button>
                 </div>
                 <div className='login-btn'>
                     <p>Don't have an account ?<span onClick={gotoSignup}>SIGN UP</span></p>
