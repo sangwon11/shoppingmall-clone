@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from 'react';
 import { Button, Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
-const ProductDetail = () => {
+const ProductDetail = ({ authenticate }) => {
 
   let { id } = useParams();
   const [product, setProduct] = useState(null);
+  const navigate = useNavigate();
 
   const getProductDetail = async() => {
     let url = `https://my-json-server.typicode.com/sangwon11/shoppingmall-clone/products/${id}`;
@@ -14,6 +15,15 @@ const ProductDetail = () => {
     console.log("data", data);
     setProduct(data);
   }
+
+  const handlePurchase = () => {
+    if (!authenticate) {
+      navigate('/signup');
+    } else {
+      // 여기에 구매 로직을 추가합니다.
+      console.log('Purchase successful!');
+    }
+  };
 
   useEffect(() => {
     getProductDetail()
@@ -37,7 +47,7 @@ const ProductDetail = () => {
               <option value="M">M</option>
               <option value="L">L</option>
             </select>
-            <Button>구매</Button>
+            <Button onClick={() =>handlePurchase()}>구매</Button>
           </form>
         </Col>
       </Row>
