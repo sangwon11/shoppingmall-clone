@@ -7,7 +7,7 @@ const Login = ({setAuthenticate}) => {
   const loginUser = (event) => {
     event.preventDefault();
     setAuthenticate(true);
-    navigate('/store')
+    navigate('/')
   }
   const gotoSignup = () => {
     navigate('/signup')
