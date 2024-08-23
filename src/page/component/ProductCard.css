@@ -1,0 +1,14 @@
+.product-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.productName {
+    font-weight: bolder;
+}
+
+.productPrice {
+    font-size: smaller;
+}
