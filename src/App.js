@@ -23,8 +23,8 @@ function App() {
     <div className='background'>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
       <Routes>
-        <Route path='/' element={<ProductAll/>}/>
-        <Route path='/store' element={<Main/>}/>
+        <Route path='/' element={<Main/>}/>
+        <Route path='/store' element={<ProductAll/>}/>
         <Route path='/signup' element={<SignUp setMember={setMember}/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<ProductDetail authenticate={authenticate}/>}/>
