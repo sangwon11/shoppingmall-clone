@@ -1,8 +1,20 @@
 .product-info {
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+}
+.product-info div {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.productList {
+    width: 300px;
+    height: 300px;
 }
 
 .productName {
