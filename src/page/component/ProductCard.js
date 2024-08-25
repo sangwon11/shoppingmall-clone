@@ -15,7 +15,6 @@ const ProductCard = ({item}) => {
       <div>
         <div className='productName'>{item?.title}</div>
         <div className='productPrice'>₩{item?.price}</div>
-        <div>{item?.new == true ? "신제품" : ""}</div>
       </div>
     </div>
   )
