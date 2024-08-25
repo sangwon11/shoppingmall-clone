@@ -1,7 +1,8 @@
 .background {
-    padding-top: 130px;
+    padding-top: 100px;
     display: flex;
     justify-content: center;
+    align-items: center;
     background: #25252b;
     color: #fff;
     min-height: 100vh;
