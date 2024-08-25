@@ -21,7 +21,7 @@ const ProductDetail = ({ authenticate }) => {
     if (!authenticate) {
       navigate('/signup');
     } else {
-      // 여기에 구매 로직을 추가합니다.
+      //구매 로직
       console.log('Purchase successful!');
     }
   };
@@ -34,7 +34,9 @@ const ProductDetail = ({ authenticate }) => {
     <Container>
       <Row>
         <Col className='product-img'>
-          <img className='productList' src={product?.img}/>
+          <div>
+            <img className='productList' src={product?.img} />
+          </div>
         </Col>
         <Col className='product-purchase'>
           <div>
