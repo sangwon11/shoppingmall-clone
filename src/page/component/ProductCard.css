@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 400px;
+    height: 300px;
     width: 200px;
 }
 
@@ -14,7 +14,7 @@
 
 .productList {
     width: 200px;
-    height: 300px;
+    height: 200px;
 }
 
 .productList:hover {
