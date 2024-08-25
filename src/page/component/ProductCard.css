@@ -7,6 +7,15 @@
     width: 200px;
 }
 
+.img-case {
+    overflow: hidden;
+}
+
+.img-case:hover {
+    box-shadow: 0 0 25px #d6ed0e;
+    transition: 0.5s;
+}
+
 .product-info:hover {
     color: #d6ed0e;
     transition: 1s;
@@ -15,12 +24,13 @@
 .productList {
     width: 200px;
     height: 200px;
+    overflow: hidden;
 }
 
 .productList:hover {
-    box-shadow: 0 0 25px #d6ed0e;
     transition: 0.5s;
-    transform: scale(1.1);
+    transform: scale(1.2);
+    overflow: hidden;
 }
 
 .product-info div {

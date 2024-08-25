@@ -9,7 +9,9 @@ const ProductCard = ({item}) => {
   }
   return (
     <div className='product-info' onClick={showDetail}>
-      <img className='productList' src={item?.img} />
+      <div className='img-case'>
+        <img className='productList' src={item?.img} />
+      </div>
       <div>
         <div className='productName'>{item?.title}</div>
         <div className='productPrice'>₩{item?.price}</div>
