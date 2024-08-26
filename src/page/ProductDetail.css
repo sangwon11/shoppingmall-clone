@@ -1,12 +1,16 @@
 .product-img {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    position: relative;
+    top: -80px;
 }
 
 .product-img div {
     width: 300px;
     height: 450px;
     overflow: hidden;
+    position: relative;
+    left: 100px;
 }
 
 .product-img div:hover {
@@ -18,20 +22,58 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 300px;
+    height: 450px;
+    position: relative;
+    top: -80px;
+}
+
+.productDetail-info {
+    height: 170px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.product-purchase .productName {
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+.product-purchase .productDescription {
+    font-weight: bolder;
+}
+
+.product-purchase .productPrice {
+    font-size: 30px;
+    font-weight: bolder;
 }
 
 .product-purchase form {
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    height: 225px;
+    width: 350px;
+}
+
+.product-purchase form select {
+    padding-left: 10px;
+    width: 120px;
+    height: 40px;
+    border-radius: 30px;
+    outline: none;
+}
+
+.btn-area {
+    width: 100%;
+    display: flex;
     justify-content: space-between;
-    height: 100px;
-    width: 150px;
 }
 
 .purchase-btn {
     position: relative;
-    width: 50%;
+    width: 170px;
     height: 45px;
     background: transparent;
     border-radius: 40px;
@@ -60,4 +102,8 @@
 
  .purchase-btn:hover:before {
     top: 0;
+}
+
+.detailList {
+    padding-left: 0;
 }

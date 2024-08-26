@@ -39,9 +39,10 @@ const ProductDetail = ({ authenticate }) => {
           </div>
         </Col>
         <Col className='product-purchase'>
-          <div>
-            <div>{product?.title}</div>
-            <div>{product?.price}</div>
+          <div className='productDetail-info'>
+            <div className='productName'>{product?.title}</div>
+            <div className='productDescription'>description description description description description</div>
+            <div className='productPrice'>₩{product?.price}</div>
           </div>
           <form>
             <select required>
@@ -50,7 +51,15 @@ const ProductDetail = ({ authenticate }) => {
               <option value="M">M</option>
               <option value="L">L</option>
             </select>
-            <button className='purchase-btn' onClick={() =>handlePurchase()}>구매</button>
+            <div className='btn-area'>
+              <button className='purchase-btn' onClick={() => handlePurchase()}>구매</button>
+              <button className='purchase-btn'>장바구니</button>
+            </div>
+            <ul className='detailList'>
+              <div>DETAILS +</div>
+              <div>SIZE GUIDE +</div>
+              <div>DELIVERY +</div>
+            </ul>
           </form>
         </Col>
       </Row>

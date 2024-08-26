@@ -49,7 +49,7 @@ const SignUp = ({setMember}) => {
                           </div>
                       </div>
                   </div>
-                  <div className='btn-area'>
+                  <div className='signup-btn-area'>
                       <button className='signup-btn' type='submit'>SIGN UP</button>
                   </div>
                   <div className='login-btn'>
