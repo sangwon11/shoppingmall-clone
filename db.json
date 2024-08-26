@@ -4,7 +4,7 @@
             "id":0,
             "img":"https://noona-hnm.netlify.app/pattern-jacket.jpeg",
             "title":"벨티드 트윌 코트",
-            "price":99900,
+            "price":"99,900",
             "choice":true,
             "size":["S","M","L"]
 

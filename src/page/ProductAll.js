@@ -23,7 +23,6 @@ useEffect(()=>{
 },[query]);
 
   return (
-    <div>
       <Container>
         <Row>
           {productList?.map((menu) => (
@@ -33,7 +32,6 @@ useEffect(()=>{
           ))}
         </Row>
       </Container>
-    </div>
   )
 }
 
