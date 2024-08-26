@@ -4,6 +4,7 @@ import ProductAll from './page/ProductAll';
 import Login from './page/Login';
 import Navbar from './page/component/Navbar';
 import Main from './page/Main';
+import Cart from './page/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import SignUp from './page/SignUp';
@@ -28,6 +29,7 @@ function App() {
         <Route path='/signup' element={<SignUp setMember={setMember}/>}/>
         <Route path='/login' element={<Login setAuthenticate={setAuthenticate}/>}/>
         <Route path='/product/:id' element={<ProductDetail authenticate={authenticate}/>}/>
+        <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </div>
   );

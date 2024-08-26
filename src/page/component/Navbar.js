@@ -27,6 +27,9 @@ const Navbar = ({authenticate, setAuthenticate}) => {
   const gotoStore = () => {
     navigate('/store')
   }
+  const gotoCart = () => {
+    navigate('/cart')
+  }
   const LoginLogout = () => {
     if (authenticate) {
       setAuthenticate(false);
@@ -63,7 +66,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
       <div className='nav-section-2'>
         <div onClick={LoginLogout}>{loginout}</div>
         <div onClick={gotoSignUp}>SIGN UP</div>
-        <div>CART 0</div>
+        <div onClick={gotoCart}>CART 0</div>
         <div>KRW</div>
       </div>
       </div>
