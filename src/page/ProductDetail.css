@@ -11,6 +11,7 @@
     overflow: hidden;
     position: relative;
     left: 100px;
+    border-radius: 20px;
 }
 
 .product-img div:hover {
