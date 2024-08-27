@@ -95,7 +95,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
         </div>
       </div>
 
-      <div className='nav2'>FlUGEL HOMEPAGE NEW OPEN</div>
+      <div className='nav2'>FLUGEL HOMEPAGE NEW OPEN</div>
 
       <div className='nav3' style={nav3}>
         <div>ALL

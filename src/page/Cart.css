@@ -2,8 +2,43 @@
     position: relative;
     top: -150px;
     background-color: transparent;
-    border: 2px solid #d6ed0e;
-    box-shadow: 0 0 10px #d6ed0e;
-    width: 800px;
+    width: 95vw;
     height: 300px;
+}
+
+.cart {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    padding: 10px 0 10px 0;
+    border-bottom: 1px solid #d6ed0e;
+}
+
+.cart-header {
+    font-weight: bolder;
+    font-size: 20px;
+}
+
+.cart-option {
+    display: flex;
+    justify-content: space-between;
+    width: 110px;
+}
+
+.cart-option div {
+    background-color: #d6ed0e;
+    color: #25252b;
+    font-weight: bolder;
+    position: relative;
+    background: transparent;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: bolder;
+    border: 2px solid #d6ed0e;
+    color: #fff;
+    overflow: hidden;
+    z-index: 1;
+    padding: 5px;
 }

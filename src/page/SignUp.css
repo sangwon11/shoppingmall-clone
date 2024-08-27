@@ -109,7 +109,7 @@
     transition: 0.5s;
 }
 
- .signup-btn:hover:before {
+.signup-btn:hover:before {
     top: 0;
 }
 

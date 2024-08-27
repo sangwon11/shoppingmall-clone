@@ -5,11 +5,17 @@ const Cart = () => {
   return (
     <div className='cart-container'>
       <div className='cart'>
-        <div>CART</div>
-        <div>전체삭체</div>
-        <div>비우기</div>
+        <div className='cart-header'>CART</div>
+        <div className='cart-option'>
+          <div>선택삭제</div>
+          <div>비우기</div>
+        </div>
+
       </div>
-      <div className='summary'></div>
+
+      <div className='summary'>
+        
+      </div>
     </div>
   )
 }
