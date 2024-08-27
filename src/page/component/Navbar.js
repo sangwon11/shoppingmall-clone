@@ -11,6 +11,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
 
   const [loginout,setLoginout] = useState('LOG IN');
   const [nav3, setNav3] = useState({});
+  const [navStyle, setNavStyle] = useState({});
 
   useEffect(() => {
     if (authenticate) {
@@ -27,6 +28,21 @@ const Navbar = ({authenticate, setAuthenticate}) => {
       setNav3({ transform: 'translateY(-100%)', transition: 'transform 0.3s ease' });
     }
   }, [location.pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setNavStyle({ transform: 'translateY(-100%)', transition: 'transform 0.3s ease' });
+      } else {
+        setNavStyle({ transform: 'translateY(0)', transition: 'transform 0.3s ease' });
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
   
   const gotoHome = () => {
     navigate('/')
@@ -56,7 +72,7 @@ const Navbar = ({authenticate, setAuthenticate}) => {
   }
 
   return (
-    <div className='nav'>
+    <div className='nav' style={navStyle}>
 
       <div className='nav1'>
         <div className='nav-section-1'>
