@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     position: relative;
-    top: -80px;
 }
 
 .product-img div {
@@ -25,7 +24,6 @@
     justify-content: space-between;
     height: 450px;
     position: relative;
-    top: -80px;
 }
 
 .productDetail-info {
