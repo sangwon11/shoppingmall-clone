@@ -14,7 +14,8 @@ const Cart = () => {
       </div>
 
       <div className='summary'>
-        
+        <div className='summary-header'>SUMMARY</div>
+        <button className='cart-purchase-btn'>쇼핑 계속하기</button>
       </div>
     </div>
   )
