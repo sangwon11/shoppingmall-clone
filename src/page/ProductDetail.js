@@ -35,7 +35,7 @@ const ProductDetail = ({ authenticate }) => {
       <Row>
         <Col className='product-img'>
           <div>
-            <img className='productList' src={product?.img} />
+            <img className='productList' src={product?.img[0]} />
           </div>
         </Col>
         <Col className='product-purchase'>

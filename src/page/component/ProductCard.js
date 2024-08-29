@@ -10,7 +10,7 @@ const ProductCard = ({item}) => {
   return (
     <div className='product-info' onClick={showDetail}>
       <div className='img-case'>
-        <img className='productList' src={item?.img} />
+        <img className='productList' src={item?.img[0]} />
       </div>
       <div>
         <div className='productName'>{item?.title}</div>
