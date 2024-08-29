@@ -51,7 +51,7 @@ const ProductDetail = ({ authenticate }) => {
               className='slides'
               style={{
                 transform: `translateX(-${slideIndex * 25}%)`,
-                transition: 'transform 0.5s ease'
+                transition: 'transform 0.3s ease'
               }}
             >
               {product?.img.map((image, index) => (
@@ -67,7 +67,7 @@ const ProductDetail = ({ authenticate }) => {
             className='sub-slides'
             style={{
                 transform: `translateX(-${slideIndex * 25}%)`,
-                transition: 'transform 0.5s ease'
+                transition: 'transform 0.3s ease'
               }}
             >
               {product?.img.map((image, index) => (
