@@ -43,7 +43,7 @@ const ProductDetail = ({ authenticate }) => {
   }, []);
 
   return (
-    <Container>
+    <Container className='productDetail'>
       <Row>
         <Col className='product-img'>
           <div className='slider'>
