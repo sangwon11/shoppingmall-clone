@@ -15,6 +15,7 @@ import ProductDetail from './page/ProductDetail';
 function App() {
   const [member, setMember] = useState(false);
   const [authenticate, setAuthenticate] = useState(false);
+  const [products, setProducts] = useState([]);
   
   useEffect(() => {
     console.log('authenticate',authenticate)
@@ -22,7 +23,7 @@ function App() {
 
   return (
     <div className='background'>
-      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate}/>
+      <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} products={products} setProducts={setProducts}/>
       <Routes>
         <Route path='/' element={<Main/>}/>
         <Route path='/store' element={<ProductAll/>}/>
