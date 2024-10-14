@@ -8,9 +8,8 @@ import Cart from './page/Cart';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { useEffect, useState } from 'react';
 import SignUp from './page/SignUp';
-import ProductDetail from './page/ProductDetail';
-/* 배포오류 */
-
+import ProductDetail from './page/ProductDetail'
+import { CartProvider } from './page/CartContext';
 
 function App() {
   const [member, setMember] = useState(false);
@@ -22,6 +21,7 @@ function App() {
   }, [authenticate])
 
   return (
+    <CartProvider>
     <div className='background'>
       <Navbar authenticate={authenticate} setAuthenticate={setAuthenticate} products={products} setProducts={setProducts}/>
       <Routes>
@@ -33,6 +33,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
     </div>
+    </CartProvider>
   );
 }
 

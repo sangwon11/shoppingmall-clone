@@ -2,12 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { useLocation, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons'
+import { useCart } from '../CartContext';
 import './Navbar.css';
 
 const Navbar = ({authenticate, setAuthenticate}) => {
   const menuList = ['SERIES', 'STORE'];
   const navigate = useNavigate();
   const location = useLocation();
+  const { cartItems } = useCart();
 
   const [loginout,setLoginout] = useState('LOG IN');
   const [nav3, setNav3] = useState({});
@@ -88,10 +90,10 @@ const Navbar = ({authenticate, setAuthenticate}) => {
           </div>  
         </div>
         <div className='nav-section-2'>
-        <div onClick={LoginLogout}>{loginout}</div>
-        <div onClick={gotoSignUp}>SIGN UP</div>
-        <div onClick={gotoCart}>CART 0</div>
-        <div>KRW</div>
+          <div onClick={LoginLogout}>{loginout}</div>
+          <div onClick={gotoSignUp}>SIGN UP</div>
+          <div onClick={gotoCart}>CART {cartItems.length}</div>
+          <div>KRW</div>
         </div>
       </div>
 

@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { useNavigate, useParams } from 'react-router-dom';
+import { useCart } from './CartContext';
 import './ProductDetail.css';
 
 const ProductDetail = ({ authenticate }) => {
@@ -8,6 +9,7 @@ const ProductDetail = ({ authenticate }) => {
   const [product, setProduct] = useState(null);
   const navigate = useNavigate();
   const [slideIndex, setSlideIndex] = useState(0);
+  const { addToCart } = useCart();
 
   const getProductDetail = async () => {
     let url = `https://my-json-server.typicode.com/sangwon11/shoppingmall-clone/products/${id}`;
@@ -16,6 +18,13 @@ const ProductDetail = ({ authenticate }) => {
     console.log("data", data);
     setProduct(data);
   }
+
+  const handleAddToCart = () => {
+    if (product) {
+      addToCart(product);
+      console.log('Product added to cart:', product);
+    }
+  };
 
   const nextSlide = () => {
     setSlideIndex((prevIndex) =>
@@ -91,7 +100,7 @@ const ProductDetail = ({ authenticate }) => {
             </select>
             <div className='btn-area'>
               <button className='purchase-btn' type="button" onClick={handlePurchase}>구매</button>
-              <button className='purchase-btn'>장바구니</button>
+              <button className='purchase-btn' type='button' onClick={handleAddToCart}>장바구니</button>
             </div>
             <ul className='detailList'>
               <div>DETAILS +</div>
