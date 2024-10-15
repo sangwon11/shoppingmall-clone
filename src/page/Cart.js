@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
 import { useCart } from './CartContext';
+import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
+  const navigate = useNavigate();
 
   // 선택한 아이템 체크박스 토글
   const handleSelectItem = (id) => {
@@ -22,6 +24,10 @@ const Cart = () => {
     });
     setSelectedItems([]);
   };
+
+  const continueShopping = () => {
+    navigate('/store');
+  }
 
   return (
     <div className='cart-container'>
@@ -41,6 +47,7 @@ const Cart = () => {
                 checked={selectedItems.includes(item.id)}
                 onChange={() => handleSelectItem(item.id)}
               />
+              <div>{item.img}</div>
               <div>{item.title}</div>
               <div>₩{item.price}</div>
             </div>
@@ -53,7 +60,7 @@ const Cart = () => {
       <div className='summary'>
         <div className='summary-header'>SUMMARY</div>
         <div>총 금액: ₩{cartItems.reduce((acc, item) => acc + item.price, 0)}</div>
-        <button className='cart-purchase-btn'>쇼핑 계속하기</button>
+        <button className='cart-purchase-btn' onClick={continueShopping}>쇼핑 계속하기</button>
       </div>
     </div>
   );
