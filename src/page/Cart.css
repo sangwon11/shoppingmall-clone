@@ -26,6 +26,11 @@
     width: 110px;
 }
 
+.cart-product-img {
+    width: 80px;
+    height: 100px;
+}
+
 .cart-option button {
     background-color: #d6ed0e;
     color: #25252b;

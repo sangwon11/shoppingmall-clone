@@ -47,9 +47,11 @@ const Cart = () => {
                 checked={selectedItems.includes(item.id)}
                 onChange={() => handleSelectItem(item.id)}
               />
-              <div>{item.img}</div>
-              <div>{item.title}</div>
-              <div>₩{item.price}</div>
+              <div>
+                <img className='cart-product-img' src={item.img[0]} />
+                <div>{item.title}</div>
+                <div>₩{item.price}</div>
+              </div>
             </div>
           ))
         ) : (
