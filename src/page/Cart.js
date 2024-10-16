@@ -27,7 +27,15 @@ const Cart = () => {
 
   const continueShopping = () => {
     navigate('/store');
-  }
+  };
+
+  // 합계 계산 후 천 단위 구분자 추가
+  const totalAmount = cartItems.reduce(
+    (acc, item) => acc + parseInt(item.price.replace(/,/g, ''), 10),
+    0
+  );
+
+  const formattedTotalAmount = totalAmount.toLocaleString(); // 천 단위 구분자 추가
 
   return (
     <div className='cart-container'>
@@ -47,11 +55,13 @@ const Cart = () => {
                 checked={selectedItems.includes(item.id)}
                 onChange={() => handleSelectItem(item.id)}
               />
-              <div>
-                <img className='cart-product-img' src={item.img[0]} />
-                <div>{item.title}</div>
-                <div>₩{item.price}</div>
-              </div>
+              <img
+                src={item.img[0] ? item.img[0] : '/path/to/default-image.jpg'}
+                alt={item.title}
+                className='cart-product-img'
+              />
+              <div>{item.title}</div>
+              <div>₩{item.price}</div>
             </div>
           ))
         ) : (
@@ -61,11 +71,14 @@ const Cart = () => {
 
       <div className='summary'>
         <div className='summary-header'>SUMMARY</div>
-        <div>총 금액: ₩{cartItems.reduce((acc, item) => acc + item.price, 0)}</div>
-        <button className='cart-purchase-btn' onClick={continueShopping}>쇼핑 계속하기</button>
+        <div>총 금액: ₩{formattedTotalAmount}</div>
+        <button className='cart-purchase-btn' onClick={continueShopping}>
+          쇼핑 계속하기
+        </button>
       </div>
     </div>
   );
-}
+};
 
 export default Cart;
+
