@@ -47,26 +47,30 @@ const Cart = () => {
             <button onClick={clearCart}>비우기</button>
           </div>
         </div>
-        {cartItems.length > 0 ? (
-          cartItems.map((item, index) => (
-            <div key={index} className='cart-item'>
-              <input
-                type='checkbox'
-                checked={selectedItems.includes(item.id)}
-                onChange={() => handleSelectItem(item.id)}
-              />
-              <img
-                src={item.img[0] ? item.img[0] : '/path/to/default-image.jpg'}
-                alt={item.title}
-                className='cart-product-img'
-              />
-              <div>{item.title}</div>
-              <div>₩{item.price}</div>
-            </div>
-          ))
-        ) : (
-          <div className='empty-cart'>장바구니가 비었습니다.</div>
-        )}
+        <div className='cart-area'>
+          {cartItems.length > 0 ? (
+            cartItems.map((item, index) => (
+              <div key={index} className='cart-item'>
+                <input
+                  type='checkbox'
+                  checked={selectedItems.includes(item.id)}
+                  onChange={() => handleSelectItem(item.id)}
+                />
+                <img
+                  src={item.img[0] ? item.img[0] : '/path/to/default-image.jpg'}
+                  alt={item.title}
+                  className='cart-product-img'
+                />
+                <div>
+                  <div>{item.title}</div>
+                  <div>₩{item.price}</div>
+                </div>
+              </div>
+            ))
+          ) : (
+              <div className='empty-cart'>장바구니가 비었습니다.</div>
+          )}
+        </div>
       </div>
 
       <div className='summary'>
@@ -74,6 +78,9 @@ const Cart = () => {
         <div>총 금액: ₩{formattedTotalAmount}</div>
         <button className='cart-purchase-btn' onClick={continueShopping}>
           쇼핑 계속하기
+        </button>
+        <button className='cart-purchase-btn'>
+          결제하기
         </button>
       </div>
     </div>
