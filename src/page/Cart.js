@@ -3,6 +3,7 @@ import { useCart } from './CartContext';
 import { useNavigate } from 'react-router-dom';
 import './Cart.css';
 
+
 const Cart = () => {
   const { cartItems, removeFromCart, clearCart } = useCart();
   const [selectedItems, setSelectedItems] = useState([]);
